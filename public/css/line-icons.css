@@ -1,0 +1,25 @@
+.icon-chat-l {
+	background: url('../img/icons/chat.png') no-repeat 0px  0px;	
+	width: 30px;
+	height: 20px;;
+	display: inline-block !important;
+}
+.icon-cart-l {
+	background: url('../img/icons/cart.png') no-repeat 0px 0px;
+	width: 30px;
+	height: 20px;;
+	display: inline-block !important;	
+}
+
+.icon-envelope-l:hover,.icon-envelope-l.active{
+	background: url('../img/icons/line-icon-hover.png') no-repeat -727px  -62px;	
+	width: 24px;
+	height: 16px;
+	display: inline-block !important;
+}
+.icon-task-l:hover{
+	background: url('../img/icons/line-icon-hover.png') no-repeat -517px -102px;
+	width: 23px;
+	height: 16px;
+	display: inline-block !important;	
+}
