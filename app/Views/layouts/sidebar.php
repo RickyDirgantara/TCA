@@ -22,7 +22,7 @@
             <a href="auctions.html" class="nav-item nav-link"><i class="fa fa-gavel me-2"></i>Lelang</a>
             <a href="items.html" class="nav-item nav-link"><i class="fa fa-cubes me-2"></i>Barang</a>
             <a href="bids.html" class="nav-item nav-link"><i class="fa fa-money-bill-wave me-2"></i>Penawaran</a>
-            <a href="users.html" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Pengguna</a>
+            <a href="/users" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Pengguna</a>
             <a href="reports.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Laporan</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>

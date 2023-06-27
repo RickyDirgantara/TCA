@@ -36,6 +36,12 @@ $routes->post('/login', 'Admin::login');
 $routes->get('/profile', 'Profile::index');
 $routes->post('/updateProfile', 'Profile::updateProfile');
 $routes->get('/logout', 'Admin::logout');
+
+
+// Auction
+$routes->get('/users', 'Users::index');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

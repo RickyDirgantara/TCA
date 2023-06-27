@@ -1,16 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Profile User</title>
+    <title>Profile Admin</title>
     <!-- Add Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <style>
-        .profile-image {
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-        }
-    </style>
 </head>
 <body>
 
@@ -34,7 +27,7 @@
                         <tr>
                             <td colspan="2">
                             <?php if ($admin && isset($admin['foto'])): ?>
-                           <img src="<?= base_url('/' . $admin['foto']); ?>" class="profile-image">
+                                <img src="<?= base_url('/' . $admin['foto']); ?>" class="profile-image">
                             <?php endif; ?>
                             </td>
                         </tr>
