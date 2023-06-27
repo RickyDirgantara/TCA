@@ -8,6 +8,11 @@ class Profile extends BaseController
 {
     public function index()
     {
+         // Pengecekan session
+         if (!session()->isLoggedIn) {
+            return redirect()->to('/login')->with('error', 'Anda harus login terlebih dahulu');
+        }
+
         // Mendapatkan ID admin yang sedang login dari session
         $adminId = session()->get('id');
     
@@ -16,11 +21,11 @@ class Profile extends BaseController
     
         // Mengambil data admin berdasarkan ID admin yang sedang login
         $admin = $model->find($adminId);
-    
+        $namaAdmin = session()->get('nama');
         // Memastikan data admin ditemukan
         if (!empty($admin)) {
             // Mengirim data admin ke view
-            return view('layouts/profile', ['admin' => $admin]);
+            return view('layouts/profile', ['namaAdmin' => $namaAdmin,'admin' => $admin]);
         } else {
             // Jika data admin tidak ditemukan, bisa menampilkan pesan kesalahan atau melakukan redirect ke halaman lain
             return redirect()->to('/')->with('error', 'Data admin tidak ditemukan');

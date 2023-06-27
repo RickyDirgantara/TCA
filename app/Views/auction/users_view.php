@@ -31,9 +31,15 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+    <!--sidebar start-->
+    <?php
+// Contoh halaman yang sedang aktif
+$currentPage = 'users'; // Ganti dengan halaman yang sesuai
+
+?>
 <div class="container-xxl position-relative bg-dark d-flex p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner" style="background-color: #17181d"class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
@@ -50,32 +56,75 @@
             <!-- Navbar Start -->
             <?= $this->include('layouts/navbar') ?>
             <!-- Navbar End -->
-    <h1>Daftar Pengguna</h1>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Username</th>
-                <th>Email</th>
-            </tr>
-        </thead>
         <tbody>
-        <?php foreach ($users as $user): ?>
-    <tr>
-        <td><?= $user['id'] ?></td>
-        <td><?= $user['username'] ?></td>
-        <td><?= $user['email'] ?></td>
-    </tr>
-<?php endforeach; ?>
-        </tbody>
-    </table>
+        <div class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h6 class="mb-0">Daftar Pengguna</h6>
+            <a href="">Show All</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0">
+                <thead>
+                    <tr class="text-dark">
+                        <th scope="col">ID</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($users as $user): ?>
+                        <tr>
+                            <td><?= $user['id'] ?></td>
+                            <td><?= $user['username'] ?></td>
+                            <td><?= $user['email'] ?></td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-secondary" onclick="openPopup(<?= $user['id'] ?>)">
+                                    <i class="fa fa-cog"></i> Setting
+                                </button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
-
-
+<!-- Popup Modal -->
+<div class="modal fade" id="settingModal" tabindex="-1" aria-labelledby="settingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="settingModalLabel">Pengaturan Pengguna</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button class="btn btn-sm btn-warning btn-block mb-3" onclick="deactivateUser()">Nonaktifkan Pengguna</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-sm btn-info btn-block mb-3" onclick="limitBidding()">Batasi Penawaran</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-sm btn-danger btn-block mb-3" onclick="deleteUser()">Hapus Pengguna</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-sm btn-info btn-block mb-3" onclick="sendMessage()">Kirim Pesan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
             <!-- Footer Start -->
+            <div class="footer">
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
@@ -93,6 +142,7 @@
             </div>
             <!-- Footer End -->
         </div>
+                            </div>
         <!-- Content End -->
 
 
@@ -101,6 +151,32 @@
     </div>
         </div>
    <!-- JavaScript Libraries -->
+   <script>
+    function openPopup(userId) {
+        // Ubah logika sesuai dengan kebutuhan Anda
+        // Misalnya, jika Anda ingin menampilkan konten pengaturan pengguna berdasarkan userId
+        // Anda dapat menggunakan AJAX untuk mengambil data pengguna dan mengisi konten modal sebelum menampilkannya
+
+        // Tampilkan modal popup
+        $('#settingModal').modal('show');
+    }
+
+    function deactivateUser() {
+        // Logika nonaktifkan pengguna
+    }
+
+    function limitBidding() {
+        // Logika batasi penawaran
+    }
+
+    function deleteUser() {
+        // Logika hapus pengguna
+    }
+
+    function sendMessage() {
+        // Logika kirim pesan
+    }
+</script>
    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/chart/chart.min.js"></script>
