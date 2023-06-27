@@ -1,77 +1,45 @@
-<aside>
-          <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu">                
-                  <li class="active">
-                      <a class="" href="index.html">
-                          <i class="icon_house_alt"></i>
-                          <span>Dashboard</span>
-                      </a>
-                  </li>
-				  <li class="sub-menu">
-                      <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Forms</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-                      <ul class="sub">
-                          <li><a class="" href="form_component.html">Form Elements</a></li>                          
-                          <li><a class="" href="form_validation.html">Form Validation</a></li>
-                      </ul>
-                  </li>       
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="">
-                          <i class="icon_desktop"></i>
-                          <span>UI Fitures</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-                      <ul class="sub">
-                          <li><a class="" href="general.html">Elements</a></li>
-                          <li><a class="" href="buttons.html">Buttons</a></li>
-                          <li><a class="" href="grids.html">Grids</a></li>
-                      </ul>
-                  </li>
-                  <li>
-                      <a class="" href="widgets.html">
-                          <i class="icon_genius"></i>
-                          <span>Widgets</span>
-                      </a>
-                  </li>
-                  <li>                     
-                      <a class="" href="chart-chartjs.html">
-                          <i class="icon_piechart"></i>
-                          <span>Charts</span>
-                          
-                      </a>
-                                         
-                  </li>
-                             
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="">
-                          <i class="icon_table"></i>
-                          <span>Tables</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-                      <ul class="sub">
-                          <li><a class="" href="basic_table.html">Basic Table</a></li>
-                      </ul>
-                  </li>
-                  
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="">
-                          <i class="icon_documents_alt"></i>
-                          <span>Pages</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-                      <ul class="sub">                          
-                          <li><a class="" href="profile.html">Profile</a></li>
-                          <li><a class="" href="/login"><span>Login Page</span></a></li>
-                          <li><a class="" href="blank.html">Blank Page</a></li>
-                          <li><a class="" href="404.html">404 Error</a></li>
-                      </ul>
-                  </li>
-                  
-              </ul>
-              <!-- sidebar menu end-->
-          </div>
-      </aside>
+       <!-- Sidebar Start -->
+       <div class="sidebar pe-4 pb-3" >
+            <nav class="navbar" style="background-color: #212529;">
+                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>TCA</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">                 
+                    <?php if (session()->get('admin')['foto']): ?>
+                                <img class="rounded-circle" src="<?= base_url(session()->get('admin')['foto']); ?>" style="width: 40px; height: 40px;">
+                                <?php else: ?>
+                                    <?php endif; ?>
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0"><?= $namaAdmin; ?></h6>
+                        <span>Admin</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="button.html" class="dropdown-item">Buttons</a>
+                            <a href="typography.html" class="dropdown-item">Typography</a>
+                            <a href="element.html" class="dropdown-item">Other Elements</a>
+                        </div>
+                    </div>
+                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
+                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
+                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/login" class="dropdown-item">Sign In</a>
+                            <a href="404.html" class="dropdown-item">404 Error</a>
+                            <a href="blank.html" class="dropdown-item">Blank Page</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
