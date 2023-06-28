@@ -34,7 +34,7 @@
     <!--sidebar start-->
     <?php
 
-$currentPage = 'auctions'; 
+$currentPage = 'Barang'; 
 
 ?>
 <div class="container-xxl position-relative bg-dark d-flex p-0">
@@ -60,7 +60,7 @@ $currentPage = 'auctions';
         <div class="container-fluid pt-4 px-4">
     <div class="bg-light text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
-            <h6 class="mb-0">Daftar Pengguna</h6>
+            <h6 class="mb-0">Daftar Barang</h6>
             <a href="">Show All</a>
         </div>
         <div class="table-responsive">
@@ -68,22 +68,20 @@ $currentPage = 'auctions';
                 <thead>
                     <tr class="text-dark">
                     <th>ID</th>
-                    <th>Judul</th>
+                    <th>Auction_id</th>
+                    <th>Nama</th>
                     <th>Deskripsi</th>
-                    <th>Waktu Berakhir</th>
-                    <th>Penawaran Tertinggi</th>
-                    <th>Status</th>
+                    <th>image_id</th>
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($auctions as $auction): ?>
+                <?php foreach ($barang as $auction): ?>
                 <tr>
-                    <td><?= $auction['id'] ?></td>
-                    <td><?= $auction['title'] ?></td>
+                    <td><?= $auction['barangid'] ?></td>
+                    <td><?= $auction['auction_id'] ?></td>
+                    <td><?= $auction['name'] ?></td>
                     <td><?= $auction['description'] ?></td>
-                    <td><?= $auction['end_time'] ?></td>
-                    <td><?= $auction['highest_bid'] ?></td>
-                    <td><?= $auction['status'] ?></td>
+                    <td><?= $auction['image_id'] ?></td>
                 </tr>
             <?php endforeach; ?>
                 </tbody>

@@ -40,6 +40,8 @@ $routes->get('/logout', 'Admin::logout');
 
 // Auction
 $routes->get('/users', 'Users::index');
+$routes->get('/auctions', 'Auctions::index');
+$routes->get('/barang', 'Barang::index');
 
 
 /*

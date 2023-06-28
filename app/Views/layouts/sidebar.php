@@ -26,7 +26,7 @@
 <a href="/auctions" class="nav-item nav-link <?php echo (uri_string() === 'auctions') ? 'active' : ''; ?>">
     <i class="fa fa-gavel me-2"></i>Lelang
 </a>
-<a href="/items" class="nav-item nav-link <?php echo (uri_string() === 'items') ? 'active' : ''; ?>">
+<a href="/barang" class="nav-item nav-link <?php echo (uri_string() === 'items') ? 'active' : ''; ?>">
     <i class="fa fa-cubes me-2"></i>Barang
 </a>
 <a href="/bids" class="nav-item nav-link <?php echo (uri_string() === 'bids') ? 'active' : ''; ?>">
