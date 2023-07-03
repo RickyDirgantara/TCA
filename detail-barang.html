@@ -324,7 +324,7 @@
             <h2 class="product-title">Nama Barang</h2>
             <div class="product-price">
               <p class="new-price">Harga Dasar:</p>
-              <span>Rp 400.000</span>
+              <h2>Rp 400.000</h2>
               <p class="card-text text-center">Lelang Berakhir Pada :</p>
               <div class="countdown">
                 <div id="jam">NA</div>
@@ -354,8 +354,43 @@
             </div>
 
             <div class="purchase-info">
-              <a href="checkout.html" class="btn btn-dark" type="button">Beli Sekarang</a>
-              <a href="checkout.html" class="btn btn-dark" type="button">Tawar</a>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Beli Sekarang
+              </button>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Bid Harga
+              </button>
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Edit Barang
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Input Bid</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>...</option>
+                        <option value="1">Rp 5.000</option>
+                        <option value="2">Rp 10.000</option>
+                        <option value="3">Rp 20.000</option>
+                        <option value="4">Rp 50.000</option>
+                        <option value="5">Rp 100.000</option>
+                      </select>
+                   </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Bid</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--End Modal-->
+
             </div>
           </div>
         </div>

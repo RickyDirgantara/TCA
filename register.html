@@ -15,7 +15,50 @@
         
         <title>Selamat Datang</title>
     </head>
+
+    <style>
+
+    #register-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group input[type="submit"] {
+      background-color: #1e1d1d;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #010101;
+    }
+    </style>
+
     <body>
+
       <!--Navbar-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -50,70 +93,50 @@
         </div>
       </nav>
       <!--End Navbar-->
-    <!--Form Barang-->
-    <div class="container">
-      <div class="card text-center mt-5">
-        <div class="card-header" style="text-align: left;">
-            <h2><b>Form Input Barang</b></h2>
-        </div>
-        <div class="card-body" style="text-align: left;">
-            <div class="mb-3">
-                <label for="text" class="form-label"><b>Nama Produk</b></label>
-                <input type="text" class="form-control" id="text" placeholder="Ketik disini" name="text" required>
-            </div>
-            <div class="mb-3">
-              <label for="text" class="form-label"><b>Harga Barang</b></label>
-              <input type="text" class="form-control" id="text" placeholder="Ketik disini" name="text" required>
+    
+      <div class="container mt-5" id="register-container" style="border-radius: 10px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);">
+        <h2>Daftar</h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="nama">Nama lengkap:</label>
+            <input type="text" id="nama" name="nama" required>
           </div>
-          <div class="mb-3">
-            <label for="text" class="form-label"><b>Waktu Lelang</b></label>
-            <form action="#" method="post">
-            <label for="jam">Jam:</label>
-            <input type="number" id="jam" name="jam" min="0" max="23" placeholder="..." required>
-        
-            <label for="menit">Menit:</label>
-            <input type="number" id="menit" name="menit" min="0" max="59" placeholder="..." required>
-        
-            <label for="detik">Detik:</label>
-            <input type="number" id="detik" name="detik" min="0" max="59" placeholder="..." required>
-        
-            <input type="submit" value="Simpan">
-          </form>
+          <div class="form-group">
+            <label for="nama">Username:</label>
+            <input type="text" id="username" name="username" required>
           </div>
-          
-            <label class="form-label"><b>Kategori</b></label>
-            <select class="form-select" aria-label="Default select example" required>
-                <legend>Kategori</legend>
-                <option selected>Pilih</option>
-                <option value="1">Laptop</option>
-                <option value="2">Keyboard</option>
-                <option value="3">Mouse</option>
-                <option value="4">Headset</option>
-                <option value="5">Smartphone</option>
-                <option value="6">PC Parts</option>
-              </select>
-            <div class="mb-3 mt-3">
-                <label for="formFileMultiple" class="form-label"><b>Foto Produk</b></label>
-                <input class="form-control" type="file" id="formFileMultiple" multiple>
-            </div>
-            <div class="mb-2">
-                <label for="exampleFormControlTextarea1" class="form-label"><b>Deskripsi Produk</b></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" required></textarea>
-              </div>
-        </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="form-group">
+            <label for="konfirmasi_password">Konfirmasi Password:</label>
+            <input type="password" id="konfirmasi_password" name="konfirmasi_password" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="nama">Nomor Telepon:</label>
+            <input type="text" id="noTelepon" name="noTelepon" required>
+          </div> 
+          <div class="form-group">
+            <label for="nama">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" required>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Daftar">
+          </div>
+        </form>
+      </div>
+      
 
-        <div class="button">
-          <a href="#" class="btn btn-danger mb-4 ms-3" style="float: left;">Cancel</a>
-          <a href="#" class="btn btn-success mb-4 ms-3" style="float: left;">Upload</a>
-        </div>
-        
-        <div class="card-footer text-muted">
-            <br>
-        </div>
-    </div>  
-    <!--End Form Barang-->
-
-    <br><br><br>
+    <br><br>
 
     <!--Footer-->
     <div class="container">
