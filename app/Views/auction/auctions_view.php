@@ -71,19 +71,19 @@ $currentPage = 'auctions';
                     <th>Judul</th>
                     <th>Deskripsi</th>
                     <th>Waktu Berakhir</th>
-                    <th>Penawaran Tertinggi</th>
+                    <th>Harga Awal</th>
                     <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($auctions as $auction): ?>
+                <?php foreach ($auction as $auctions): ?>
                 <tr>
-                    <td><?= $auction['id'] ?></td>
-                    <td><?= $auction['title'] ?></td>
-                    <td><?= $auction['description'] ?></td>
-                    <td><?= $auction['end_time'] ?></td>
-                    <td><?= $auction['highest_bid'] ?></td>
-                    <td><?= $auction['status'] ?></td>
+                <td><?= $auctions->id ?></td>
+                <td><?= $auctions->title ?></td>
+                <td><?= $auctions->description ?></td>
+                <td><?= $auctions->end_time ?></td>
+                <td><?= $auctions->starting_price ?></td>
+                <td><?= $auctions->status ?></td>
                 </tr>
             <?php endforeach; ?>
                 </tbody>

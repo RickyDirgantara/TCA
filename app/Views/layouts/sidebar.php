@@ -41,7 +41,7 @@
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
                 <div class="dropdown-menu bg-transparent border-0">
-                    <a href="/login" class="dropdown-item">Sign in</a>
+                    <a href="/logout" class="dropdown-item">Sign in</a>
                     <a href="404.html" class="dropdown-item">404 Error</a>
                     <a href="blank.html" class="dropdown-item">Halaman Kosong</a>
                 </div>

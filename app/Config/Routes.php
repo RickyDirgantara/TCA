@@ -1,5 +1,5 @@
 <?php
-
+use App\Controllers\DetailBarang;
 namespace Config;
 
 // Create a new instance of our RouteCollection class.
@@ -11,7 +11,7 @@ $routes = Services::routes();
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Dashboard');
+$routes->setDefaultController('HomePage');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -29,7 +29,9 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Dashboard::index');
+$routes->get('/', 'HomePage::index/$1');
+$routes->get('home/index/(:num)', 'HomePage::category/$1');
+$routes->get('/admin', 'Dashboard::index');
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/login', 'Admin::login');
 $routes->post('/login', 'Admin::login');
@@ -40,9 +42,33 @@ $routes->get('/logout', 'Admin::logout');
 
 // Auction
 $routes->get('/users', 'Users::index');
-$routes->get('/auctions', 'Auctions::index');
+$routes->get('/auctions', 'Auction::index');
 $routes->get('/barang', 'Barang::index');
-
+$routes->get('/userProfile', 'Profile::index');
+$routes->post('/detailbarang/(:num)', 'DetailBarang::liveBids/$1');
+$routes->get('/checkIfBidsExistInDatabase', 'DetailBarang::checkIfBidsExistInDatabase');
+$routes->get('/getTotalBids/(:num)', 'DetailBarang::getTotalBids/$1');
+$routes->get('/snk', 'SnK::index');
+$routes->get('/previewbarangseller/(:num)', 'PreviewBarang::index/$1');
+$routes->get('/editbarang/(:num)', 'PreviewBarang::EditBarang/$1');
+$routes->post('/editbarang/(:num)', 'PreviewBarang::update/$1');
+$routes->get('/checkout/(:num)', 'Checkout::index/$1');
+$routes->get('/bukti-pembayaran', 'Checkout::Checkout');
+// user function
+$routes->get('/user_login', 'Users::user_login');
+$routes->post('/user_login', 'Users::processLogin');
+$routes->post('/save', 'Users::save');
+$routes->get('/signup', 'Users::registration');
+$routes->get('/Userlogout', 'Users::Userlogout');
+$routes->get('/UserProfile', 'UserProfile::index');
+$routes->get('/form_barang', 'UserBarang::index');
+$routes->post('/updatebarang', 'PreviewBarang::update');
+$routes->post('/tambahBarang', 'UserBarang::store');
+$routes->get('/detailbarang/(:num)', 'DetailBarang::show/$1', ['as' => 'detailbarang.show']);
+$routes->get('/editProfile', 'UserProfile::EditProfile');
+$routes->post('/UpdateUserProfile', 'UserProfile::UpdateProfilePictures');
+$routes->post('/UpdateUser', 'UserProfile::updateProfile');
+$routes->get('/myProfile', 'UserProfile::UpdateProfileView');
 
 /*
  * --------------------------------------------------------------------

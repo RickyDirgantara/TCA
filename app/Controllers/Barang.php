@@ -19,5 +19,6 @@ class Barang extends Controller
 
         $data['barang'] = $model->findAll();
         return view('auction/barang', ['namaAdmin' => $namaAdmin, 'barang' => $data['barang']]);
+
     }
 }

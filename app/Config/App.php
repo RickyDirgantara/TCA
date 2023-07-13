@@ -320,7 +320,6 @@ class App extends BaseConfig
      * @deprecated use Config\Cookie::$samesite property instead.
      */
     public ?string $cookieSameSite = 'Lax';
-
     /**
      * --------------------------------------------------------------------------
      * Reverse Proxy IPs

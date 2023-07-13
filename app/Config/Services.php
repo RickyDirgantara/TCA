@@ -1,7 +1,7 @@
 <?php
 
 namespace Config;
-
+use CodeIgniter\HTTP\URI;
 use CodeIgniter\Config\BaseService;
 
 /**
@@ -19,6 +19,12 @@ use CodeIgniter\Config\BaseService;
  */
 class Services extends BaseService
 {
+
+    public $aliases = [
+        // ...
+        'url' => CodeIgniter\HTTP\URI::class,
+        // ...
+    ];
     /*
      * public static function example($getShared = true)
      * {

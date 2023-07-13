@@ -34,7 +34,7 @@
     <!--sidebar start-->
     <?php
 
-$currentPage = 'Barang'; 
+$currentPage = 'items'; 
 
 ?>
 <div class="container-xxl position-relative bg-dark d-flex p-0">
@@ -68,20 +68,20 @@ $currentPage = 'Barang';
                 <thead>
                     <tr class="text-dark">
                     <th>ID</th>
-                    <th>Auction_id</th>
+                    <th>ID Lelang</th>
                     <th>Nama</th>
                     <th>Deskripsi</th>
-                    <th>image_id</th>
+                    <th>Kategori</th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($barang as $auction): ?>
                 <tr>
-                    <td><?= $auction['barangid'] ?></td>
-                    <td><?= $auction['auction_id'] ?></td>
-                    <td><?= $auction['name'] ?></td>
-                    <td><?= $auction['description'] ?></td>
-                    <td><?= $auction['image_id'] ?></td>
+                    <td><?= $auction['barang_id'] ?></td>
+                    <td><?= $auction['user_id'] ?></td>
+                    <td><?= $auction['nama_produk'] ?></td>
+                    <td><?= $auction['deskripsi_produk'] ?></td>
+                    <td><?= $auction['kategori'] ?></td>
                 </tr>
             <?php endforeach; ?>
                 </tbody>
