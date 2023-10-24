@@ -85,7 +85,7 @@
   
           <div class="button">
                     <button type="submit" class="btn btn-success mb-4 ms-3 float-start">Update</button>
-                    <a href="/cancel" class="btn btn-danger mb-4 ms-2 float-start">Cancel</a>
+                    <a href="/UserProfile" class="btn btn-danger mb-4 ms-2 float-start">Cancel</a>
                 </div>
 </form>
           <div class="card-footer text-muted">

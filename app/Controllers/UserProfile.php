@@ -48,6 +48,9 @@ class UserProfile extends BaseController
             if ($currentPage > $totalPages) {
                 $currentPage = $totalPages;
             }
+            if ($currentPage < 1) {
+                $currentPage = 1;
+            }
             $barangs = $barangModel->getBarangsByUserIdPaginated($userSession['id'], $itemsPerPage, $currentPage, true);
 
             // Periksa apakah ada barang yang dimiliki oleh pengguna atau tidak

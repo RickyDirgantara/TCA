@@ -13,7 +13,12 @@
 
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<style>
+    .card-img {
+    height: 300px;
+    object-fit: cover;
+}
+    </style>
     <title>Home</title>
 </head>
 <body>
@@ -112,7 +117,7 @@
                 <div class="card">
                     <a href="/detailbarang/<?= $barang['barang_id']; ?>">
                             <?php if (!empty($barang['image'])) : ?>
-                                <img src="<?= $barang['image']; ?>" class="card-img-top pt-3 img-fluid" alt="Gambar Barang">
+                                <img src="<?= $barang['image']; ?>" class="card-img-top pt-3 img-fluid card-img" alt="Gambar Barang">
                             <?php else : ?>
                                 <img src="<?= base_url('path/to/default-image.jpg') ?>" class="card-img-top pt-3 img-fluid" alt="Gambar Default">
                             <?php endif; ?>
@@ -129,6 +134,7 @@
                         </div>
                     </div>
                 </div>
+                        
             <?php endif; ?>
         <?php endforeach; ?>
     </div>

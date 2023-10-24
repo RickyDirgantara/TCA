@@ -1,0 +1,54 @@
+[33mcommit b3e9e9aec1f32dd3be45b6f290ebb049cddf8072[m[33m ([m[1;36mHEAD -> [m[1;32mdashboard[m[33m, [m[1;31morigin/dashboard[m[33m)[m
+Author: RickyDirgantara <111202113268@mhs.dinus.ac.id>
+Date:   Wed Jun 28 18:10:19 2023 +0700
+
+    adding database
+
+[33mcommit 84e780483f42e32dce4d180fcc56561ec58fad91[m
+Author: RickyDirgantara <111202113268@mhs.dinus.ac.id>
+Date:   Wed Jun 28 18:06:06 2023 +0700
+
+    updating dashboard
+
+[33mcommit f1756ded0ea26900a4a7b887bdd7a3d04f613eb6[m
+Author: RickyDirgantara <111202113268@mhs.dinus.ac.id>
+Date:   Wed Jun 28 01:56:53 2023 +0700
+
+    adding user function
+
+[33mcommit eecdc9a4269f677d78d16a92d94d9f18478c5d07[m
+Merge: 1f050ff aae5e8a
+Author: RickyDirgantara <111202113268@mhs.dinus.ac.id>
+Date:   Tue Jun 27 22:51:12 2023 +0700
+
+    Merge branch 'dashboard' of https://github.com/RickyDirgantara/TCA into dashboard
+
+[33mcommit 1f050ff34557044c3b5a8550ec3c5a438dd047ec[m
+Author: RickyDirgantara <111202113268@mhs.dinus.ac.id>
+Date:   Tue Jun 27 22:48:40 2023 +0700
+
+    updated
+
+[33mcommit aae5e8abbd01fa621d0ad7d3daea2659ddc36376[m
+Author: RickyDirgantara <91929920+RickyDirgantara@users.noreply.github.com>
+Date:   Tue Jun 27 15:03:10 2023 +0700
+
+    Update README.md
+
+[33mcommit c271b093bcdbf782229b25a95effa8ab12de3291[m
+Author: RickyDirgantara <111202113268@mhs.dinus.ac.id>
+Date:   Tue Jun 27 15:01:16 2023 +0700
+
+    stylng dashboard
+
+[33mcommit c2c51148b5242a99008cce9e79a7b0b0f3ca9a58[m
+Author: RickyDirgantara <111202113268@mhs.dinus.ac.id>
+Date:   Tue Jun 27 14:13:19 2023 +0700
+
+    memperbarui admin dashboard
+
+[33mcommit 281b69d33d207780e6936b66f2b58547b6ecdc69[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmy-branch[m[33m, [m[1;32mmaster[m[33m)[m
+Author: RickyDirgantara <111202113268@mhs.dinus.ac.id>
+Date:   Mon Jun 26 13:58:49 2023 +0700
+
+    dashboard admin

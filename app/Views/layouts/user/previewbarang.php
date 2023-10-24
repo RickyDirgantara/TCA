@@ -282,9 +282,9 @@
             <h2 class="product-title"><?php echo $barang['nama_produk']; ?></h2>
             <div class="product-price">
               <p class="new-price">Harga Dasar:</p>
-              <h4><?php echo $barang['starting_price']; ?></h4>
-              <p class="new-price">Harga Sekarang:</p>
-              <h2><?php echo $barang['current_price']; ?></h2>
+              <h4>Rp. <?php echo $barang['starting_price']; ?></h4>
+              <p class="new-price">Harga Beli Sekarang:</p>
+              <h2>Rp. <?php echo $barang['buy_now_price']; ?></h2>
               <p class="card-text text-center">Lelang Berakhir Pada :</p>
               <div class="countdown">
                 <div id="jam"><i class="bi bi-calendar-minus" style="font-size: 15px"></i> <?php echo $barang['tanggal']; ?></div>

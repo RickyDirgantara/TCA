@@ -43,7 +43,7 @@ class PreviewBarang extends BaseController
      $auction = $auctionModel->getAuctionByBarangId($id);
 if ($auction) {
     $barang['starting_price'] = $auction['starting_price'];
-    $barang['current_price'] = $auction['current_price'];
+    $barang['buy_now_price'] = $auction['buy_now_price'];
 }
             $barang['deskripsi_produk'] = $desc['deskripsi_produk'];
             $data['auction_id'] = isset($auction['id']) ? $auction['id'] : '';            
@@ -79,7 +79,7 @@ if ($auction) {
     // Assign the total bids to the data array
     $data['totalBids'] = $totalBids;
     // Assign the current price to the data array
-    $data['currentPrice'] = isset($barang['current_price']) ? $barang['current_price'] : 0;
+    $data['buyNowPrice'] = isset($barang['buy_now_price']) ? $barang['buy_now_price'] : 0;
 
 
     return view('/layouts/user/previewbarang', $data);
@@ -125,24 +125,22 @@ if ($auction) {
            }
            
 
-   // Memuat relasi auction dengan kueri manual
-   $auction = $auctionModel->getAuctionByBarangId($id); // Use $auctionModel after initialization
+
+   $auction = $auctionModel->getAuctionByBarangId($id); 
    if ($auction) {
        $barang['starting_price'] = $auction['starting_price'];
    }
    $data['auction_id'] = isset($auction['id']) ? $auction['id'] : '';
 
    $data['barang'] = $barang;
-     // Calculate the total bids for the auction
      $bidsModel = new BidsModel();
      $totalBids = $bidsModel->where('auction_id', $data['auction_id'])->countAllResults();
    $bids = $bidsModel->where('barang_id', $id)->findAll();
 
-     // Mengirimkan data penawaran ke view
-   $data['bids'] = $bids;
-   // Assign the total bids to the data array
+     // Mengirimkan data penawaran ke view   $data['bids'] = $bids;
+
    $data['totalBids'] = $totalBids;
-   // Assign the current price to the data array
+
    $data['currentPrice'] = isset($barang['current_price']) ? $barang['current_price'] : 0;
 
    return view('/layouts/user/edit_barang', $data);
@@ -156,21 +154,18 @@ public function update($barangId)
     $buyNowPrice = $this->request->getPost('buy_now_price');
     $endTime = $this->request->getPost('end_time');
     $deskripsiProduk = $this->request->getPost('deskripsi_produk');
-
     $barangModel = new BarangModel();
     $auctionModel = new AuctionModel();
-
-    // Retrieve the existing data from the database
     $barang = $barangModel->getBarangById($barangId);
     $auction = $auctionModel->getAuctionByBarangId($barangId);
 
-    // Update data barang if there are changes
+
     if (!empty($namaProduk)) {
         $barang['nama_produk'] = $namaProduk;
         $barangModel->updateBarang($barangId, $barang);
     }
 
-    // Update data auction if there are changes
+
     if (!empty($buyNowPrice) || !empty($endTime)) {
         if (!empty($buyNowPrice)) {
             $auction['buy_now_price'] = $buyNowPrice;

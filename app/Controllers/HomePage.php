@@ -19,16 +19,13 @@ class HomePage extends BaseController
     public function index($kategori = null)
     {
          
-        // Mendapatkan data session user
+
         $userSession = session()->get('user');
 
-        // Mendapatkan nama user dari session jika user sudah login
         $namaUser = isset($userSession['full_name']) ? $userSession['full_name'] : '';
 
-        // Mengirimkan data sesi user ke tampilan
         $data['namaUser'] = $namaUser;
 
-        // Mengambil semua data barang berdasarkan kategori dari model BarangModel
         $barangModel = new BarangModel();
         $imageModel = new ImageModel();
 
@@ -49,7 +46,6 @@ class HomePage extends BaseController
             $currentPage = $totalPages;
         }
 
-        // Mendapatkan gambar untuk setiap barang
         foreach ($barangs as &$barang) {
             $images = $imageModel->getImagesByBarangId($barang['barang_id']);
             $barang['image'] = isset($images[0]['image_url']) ? $images[0]['image_url'] : '';          

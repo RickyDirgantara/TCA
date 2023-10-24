@@ -92,11 +92,6 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $barang['nama_produk']; ?></h5>
                             <p class="card-text"><?= $barang['deskripsi_produk']; ?></p>
-                            <p class="card-text text-center">Lelang Berakhir Pada:</p> 
-                            <div class="countdown">
-                                <p>Tanggal: <?= $barang['tanggal']; ?></p><br>
-                                <p>Jam: <?= $barang['jam']; ?></p>
-                            </div>
                             <a href="/previewbarangseller/<?= $barang['barang_id']; ?>" class="btn btn-primary">Lihat Barang</a>
                         </div>
                     </div>
